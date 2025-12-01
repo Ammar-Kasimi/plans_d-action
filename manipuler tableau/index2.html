@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+
+    <div class="flex flex-col w-full"></div>
+    <aside id="sidebar" class=" flex justify-center bg-white h-full  w-1/2 md:w-1/3">
+        <div class="flex flex-col items-center w-27/28 shadow-xl/20 border-2 rounded-md gap-[10px] "
+            id="sidebar-container">
+            <button id="add-btn"
+                class="bg-green-600 hand shadow-green-200 text-white shadow-md mt-[10px] w-3/5 h-[30px] rounded-md ">Add
+                contact</button>
+            <div id="cards" class="w-full h-full flex-col flex items-center gap-[10px]">
+
+            </div>
+        </div>
+    </aside>
+
+    <div class="fixed hidden overflow-y-auto flex justify-center h-full w-full bg-black/75" id="modalcontainer">
+        <form action="" class=" flex flex-col  bg-white w-1/3 bg-opacity-1/3 h-full inset-0" id="add-form">
+            <div class="flex justify-center">
+                <p id="form_title" class="text-2xl my-[20px]">Add a contact</p>
+            </div>
+            <div class="bg-gray-200  items-center w-full flex-col flex">
+                <label for="form_name" class="text-xl">Name:</label>
+                <input type="text" id="form_name" class="h-[30px] w-2/3 rounded-md border-2 bg-white"
+                    placeholder="name full-name">
+                <label for="form_email" class="text-xl">Email adress:</label>
+                <input type="text" id="form_email" class="h-[30px] w-2/3 rounded-md border-2 bg-white"
+                    placeholder="name@gmail.com">
+                <label for="form_number" class="text-xl">telephone:</label>
+                <input type="text" id="form_number" class="h-[30px] w-2/3 rounded-md border-2 bg-white"
+                    placeholder="1234567890">
+                <div class="flex justify-evenly w-full h-[100px] items-center">
+                    <button class="bg-gray-500 h-[40px] text-lg hand rounded-md w-4/9 text-white "
+                        id="cancel_btn">Cancel</button>
+                    <button class="bg-green-500 h-[40px] text-lg hand rounded-md w-4/9 text-white "
+                        id="submit_btn">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="fixed hidden overflow-y-auto flex justify-center h-full w-full bg-black/75" id="modify_container">
+        <div action="" class=" flex flex-col  bg-white h-1/3 w-1/3 bg-opacity-1/3 h-full inset-0" id="modify_modal">
+
+        </div>
+    </div>
+    <script src="code2.js"></script>
+</body>
